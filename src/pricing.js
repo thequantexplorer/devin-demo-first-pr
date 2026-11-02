@@ -20,7 +20,7 @@ function formatPrice(cents) {
 
 function bulkDiscountPercent(quantity) {
   for (const tier of BULK_TIERS) {
-    if (quantity > tier.minQty) {
+    if (quantity >= tier.minQty) {
       return tier.percent;
     }
   }
